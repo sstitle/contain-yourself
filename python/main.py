@@ -14,6 +14,7 @@ def main():
     logger.info("Hello, World from Python!")
     logger.warning("This is a warning.")
     logger.error("This is an error.")
+
     try:
         # This will cause a mypy error because we're passing a string instead of an int
         result = add_numbers(5, "10")
