@@ -25,10 +25,10 @@ jobs:
         run: docker build -t devcontainer:latest -f .devcontainer/Dockerfile .
 
       - name: Execute make run-python in Container
-        run: docker run --rm devcontainer:latest make run-python
+        run: docker run --rm devcontainer:latest bash -c "make run-python"
 
       - name: Execute make run-cpp in Container
-        run: docker run --rm devcontainer:latest make run-cpp
+        run: docker run --rm devcontainer:latest bash -c "make run-cpp"
 
       - name: Execute make run-go in Container
-        run: docker run --rm devcontainer:latest make run-go
+        run: docker run --rm devcontainer:latest bash -c "make run-go"
