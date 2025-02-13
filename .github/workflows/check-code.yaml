@@ -31,10 +31,10 @@ jobs:
 
       - name: Run Python
         run: make run-python
-        
+
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      
+
       - name: Run TypeScript
         run: make run-typescript
