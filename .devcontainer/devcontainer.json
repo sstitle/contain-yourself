@@ -1,16 +1,16 @@
 {
-    "name": "contain-yourself",
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "llvm-vs-code-extensions.vscode-clangd",
-                "ms-azuretools.vscode-docker",
-                "ms-python.python",
-                "golang.go"
-            ]
-        }
+  "name": "contain-yourself",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "golang.go"
+      ]
     }
+  }
 }

@@ -1,4 +1,4 @@
-.PHONY: run-go build-cpp
+.PHONY: run-go run-cpp run-python format
 
 run-go:
 	@go run go/main.go
@@ -10,3 +10,9 @@ run-cpp:
 
 run-python:
 	@uv run python/main.py
+
+format:
+	@bun run fmt
+
+lint:
+	@bun run lint
