@@ -8,6 +8,8 @@ set(CMAKE_CXX_COMPILER ${CLANG_COMPILER})
 find_program(CLANG_C_COMPILER NAMES clang REQUIRED)
 set(CMAKE_C_COMPILER ${CLANG_C_COMPILER})
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Set the project name and version
 project(contain-yourself VERSION 1.0)
 
