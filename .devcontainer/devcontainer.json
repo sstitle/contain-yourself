@@ -9,6 +9,7 @@
         "llvm-vs-code-extensions.vscode-clangd",
         "ms-azuretools.vscode-docker",
         "ms-python.python",
+        "ms-python.mypy-type-checker",
         "golang.go"
       ]
     }
