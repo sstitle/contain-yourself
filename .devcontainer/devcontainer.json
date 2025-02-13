@@ -1,0 +1,6 @@
+{
+    "name": "contain-yourself",
+    "build": {
+        "dockerfile": "Dockerfile"
+    }
+}
