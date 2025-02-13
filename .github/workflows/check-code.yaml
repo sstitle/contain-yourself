@@ -25,3 +25,9 @@ jobs:
 
       - name: Run C++
         run: make run-cpp
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Run Python
+        run: make run-python
