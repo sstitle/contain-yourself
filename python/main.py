@@ -10,7 +10,6 @@ def add_numbers(a: int, b: int) -> int:
 
 
 def main():
-
     # Log a hello world message
     logger.info("Hello, World from Python!")
     logger.warning("This is a warning.")
