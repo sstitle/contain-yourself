@@ -14,4 +14,5 @@ Convenience targets from Makefile for running:
 make run-go
 make run-cpp
 make run-python
+make run-typescript
 ```

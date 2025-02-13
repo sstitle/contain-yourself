@@ -16,3 +16,6 @@ format:
 
 lint:
 	@bun run lint
+
+run-typescript:
+	@bun run typescript/main.ts
