@@ -6,8 +6,13 @@ RUN useradd -m -s /bin/bash appuser
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Set up the environment including C++ development tools
+# Note (stitle): Use "apt-cache policy [deps]" on unpinned deps to find names
 RUN apt-get update && \
-    apt-get install -y cmake clang clangd unzip --no-install-recommends && \
+    apt-get install -y \
+        cmake=3.25.1-1 \
+        clang=1:14.0-55.7~deb12u1 \
+        clangd=1:14.0-55.7~deb12u1 \
+        unzip=6.0-28 --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
 # Set up UV a modern package manager for Python
