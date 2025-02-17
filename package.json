@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@bufbuild/buf": "^1.50.0",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
