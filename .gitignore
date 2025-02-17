@@ -2,3 +2,8 @@ build/
 .venv/
 node_modules/
 .cache/
+
+
+# Added by cargo
+
+/target

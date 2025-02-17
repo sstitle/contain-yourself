@@ -19,3 +19,6 @@ lint:
 
 run-typescript:
 	@bun run typescript/main.ts
+
+run-rust:
+	@cargo run

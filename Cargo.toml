@@ -1,0 +1,10 @@
+[package]
+name = "contain-yourself"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[[bin]]
+name = "contain-yourself"
+path = "rust/main.rs"
