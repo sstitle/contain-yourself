@@ -13,6 +13,7 @@ RUN apt-get update && \
         clang=1:14.0-55.7~deb12u1 \
         clangd=1:14.0-55.7~deb12u1 \
         curl=7.88.1-10+deb12u8 \
+        swig \
         unzip=6.0-28 --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 

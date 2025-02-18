@@ -15,4 +15,5 @@ make run-go
 make run-cpp
 make run-python
 make run-typescript
+make run-rust
 ```
