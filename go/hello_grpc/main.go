@@ -46,13 +46,13 @@ type helloWorldServer struct {
 // SayHello sends a greeting.
 func (s *helloWorldServer) SayHello(
 	ctx context.Context,
-	req *connect.Request[hello_worldv1.HelloRequest],
-) (*connect.Response[hello_worldv1.HelloResponse], error) {
+	req *connect.Request[hello_worldv1.SayHelloRequest],
+) (*connect.Response[hello_worldv1.SayHelloResponse], error) {
 	name := req.Msg.Name
 	if name == "" {
 		name = "World"
 	}
-	response := &hello_worldv1.HelloResponse{
+	response := &hello_worldv1.SayHelloResponse{
 		Message: "Hello, " + name + "!",
 	}
 	return connect.NewResponse(response), nil
