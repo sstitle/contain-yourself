@@ -17,7 +17,9 @@ jobs:
           bun-version: latest
 
       - name: Generate Protobuf code
-        run: make generate-proto
+        run: |
+          bun install
+          make generate-proto
 
       - name: Trunk Check
         uses: trunk-io/trunk-action@v1
