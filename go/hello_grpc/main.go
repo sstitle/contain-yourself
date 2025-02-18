@@ -18,7 +18,7 @@ import (
 const address = "localhost:8080"
 
 func main() {
-	fmt.Println("Hello World from Go!")
+	fmt.Println("Hello World from Go and gRPC!")
 	mux := http.NewServeMux()
 	path, handler := hello_worldv1connect.NewHelloWorldServiceHandler(&helloWorldServer{})
 	mux.Handle(path, handler)

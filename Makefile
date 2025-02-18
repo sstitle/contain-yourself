@@ -3,7 +3,10 @@
 
 ######### Run commands
 run-go:
-	@go run go/main.go
+	@go run go/hello_world/main.go
+
+run-go-grpc:
+	@go run go/hello_grpc/main.go
 
 run-cpp:
 	@cmake -S . -B build
