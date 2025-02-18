@@ -32,10 +32,12 @@ func main() {
 		connect.WithCompressMinBytes(1024),
 	))
 	fmt.Println("Server is running on", address)
-	http.ListenAndServe(
+	if err := http.ListenAndServe(
 		address,
 		h2c.NewHandler(mux, &http2.Server{}),
-	)
+	); err != nil {
+		fmt.Println("Failed to start server:", err)
+	}
 }
 
 // helloWorldServer implements the HelloWorld service.
