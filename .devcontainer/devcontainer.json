@@ -11,8 +11,10 @@
         "ms-python.python",
         "ms-python.mypy-type-checker",
         "ms-vscode.cmake-tools",
-        "golang.go"
+        "golang.go",
+        "zxh404.vscode-proto3"
       ]
     }
-  }
+  },
+  "forwardPorts": [8080]
 }

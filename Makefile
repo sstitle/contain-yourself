@@ -1,7 +1,12 @@
-.PHONY: run-go run-cpp run-python format
+.PHONY: run-go run-cpp run-python format lint run-typescript run-rust generate-proto
 
+
+######### Run commands
 run-go:
-	@go run go/main.go
+	@go run go/hello_world/main.go
+
+run-go-grpc:
+	@go run go/hello_grpc/main.go
 
 run-cpp:
 	@cmake -S . -B build
@@ -11,14 +16,19 @@ run-cpp:
 run-python:
 	@uv run python/main.py
 
+run-rust:
+	@cargo run
+
+run-typescript:
+	@bun run typescript/main.ts
+
+
+### Lifecycle commands
 format:
 	@bun run fmt
 
 lint:
 	@bun run lint
 
-run-typescript:
-	@bun run typescript/main.ts
-
-run-rust:
-	@cargo run
+generate-proto:
+	@bun run buf generate
