@@ -1,4 +1,4 @@
-.PHONY: run-go run-cpp run-python format
+.PHONY: run-go run-cpp run-python format lint run-typescript run-rust generate-proto
 
 run-go:
 	@go run go/main.go
@@ -22,3 +22,6 @@ run-typescript:
 
 run-rust:
 	@cargo run
+
+generate-proto:
+	@bun run buf generate
