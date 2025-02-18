@@ -9,7 +9,11 @@ service HelloWorldService {
 }
 
 // The request message containing the user's name.
-message HelloRequest { string name = 1; }
+message HelloRequest {
+  string name = 1;
+}
 
 // The response message containing the greetings.
-message HelloResponse { string message = 1; }
+message HelloResponse {
+  string message = 1;
+}
