@@ -22,6 +22,8 @@ run-rust:
 run-typescript:
 	@bun run typescript/main.ts
 
+run-swig:
+	@go run swig/main.go
 
 ### Lifecycle commands
 format:
