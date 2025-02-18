@@ -10,6 +10,7 @@ import (
 
 	"connectrpc.com/connect"
 
+	"connectrpc.com/grpcreflect"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
 )
@@ -17,9 +18,19 @@ import (
 const address = "localhost:8080"
 
 func main() {
+	fmt.Println("Hello World from Go!")
 	mux := http.NewServeMux()
 	path, handler := hello_worldv1connect.NewHelloWorldServiceHandler(&helloWorldServer{})
 	mux.Handle(path, handler)
+	mux.Handle(grpcreflect.NewHandlerV1(
+		grpcreflect.NewStaticReflector(hello_worldv1connect.HelloWorldServiceName),
+		connect.WithCompressMinBytes(1024),
+	))
+	// Note (stitle): V1Alpha handler is for using it with Postman
+	mux.Handle(grpcreflect.NewHandlerV1Alpha(
+		grpcreflect.NewStaticReflector(hello_worldv1connect.HelloWorldServiceName),
+		connect.WithCompressMinBytes(1024),
+	))
 	fmt.Println("Server is running on", address)
 	http.ListenAndServe(
 		address,
